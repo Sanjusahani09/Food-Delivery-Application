@@ -1,0 +1,166 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.order-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+
+.order-details {
+    margin-bottom: 32px;
+}
+
+.order-id {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.estimated-time {
+    color: #666;
+}
+
+.status-container {
+    position: relative;
+    margin: 48px 0;
+    padding-top: 40px;
+}
+
+.status-line {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.status-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #4CAF50;
+    transition: width 0.5s ease-in-out;
+}
+
+.bike-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 2s ease-in-out;
+    z-index: 3;
+}
+
+.bike {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
+.status-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.status-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 3px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.status-step.active .step-icon {
+    border-color: #4CAF50;
+    background: #4CAF50;
+}
+
+.status-step p {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-step.active p {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.order-items {
+    margin-top: 32px;
+    border-top: 1px solid #eee;
+    padding-top: 24px;
+}
+
+.order-items h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    font-weight: 600;
+    color: #1a1a1a;
+}

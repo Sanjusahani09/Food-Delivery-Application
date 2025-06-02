@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About FoodExpress</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.jsp">
+                <img src="bike2.png" alt="QuickBites Logo" class="nav-logo">
+                <span class="company-name">QuickBites</span>
+            </a>
+        </div>
+        <div class="menu-toggle">☰</div>
+        <div class="nav-links">
+            <a href="home.jsp">Home</a>
+            <a href="UserLogin.jsp">Log in</a>
+            <a href="index.jsp" class="signup-btn">Sign up</a>
+        </div>
+    </nav>
+    <div class="min-h-screen">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>About QuickBites</h1>
+                    <p>Delivering Happiness, One Meal at a Time</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="container mission-section">
+            <div class="text-center">
+                <h2>Our Mission</h2>
+                <p>At FoodExpress, we're passionate about connecting people with their favorite restaurants. 
+                   Our mission is to make food delivery accessible, efficient, and delightful for everyone.</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon truck-icon"></div>
+                    <h3>Fast Delivery</h3>
+                    <p>Average delivery time of 30 minutes or less</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon clock-icon"></div>
+                    <h3>24/7 Service</h3>
+                    <p>Available whenever you need us</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon award-icon"></div>
+                    <h3>Quality Assured</h3>
+                    <p>Partnered with top-rated restaurants</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <div class="container">
+                <h2>Meet Our Team</h2>
+                <div class="team-grid" id="teamGrid">
+                    <!-- Team members will be inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="container">
+                <div class="stats-grid" id="statsGrid">
+                    <!-- Stats will be inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

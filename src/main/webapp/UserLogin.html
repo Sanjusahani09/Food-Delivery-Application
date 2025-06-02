@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Login</title>
+  <link rel="stylesheet" type="text/css" href="userLogin.css">
+  
+  <style>
+    /* Add basic styling for the eye toggle */
+    body{
+    	background: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png') no-repeat center center/cover;
+    }
+    
+    
+    .password-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-container input[type="password"],
+    .password-container input[type="text"] {
+      width: 100%;
+      padding-right: 40px; /* Space for eye icon */
+      font-size: 16px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .toggle-password:hover {
+      color: #000;
+    }
+    
+    .remember-forgot {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  font-size: 1rem;
+	  margin-top: 1rem;
+	}
+	
+	.remember-forgot a {
+	  color: #007BFF;
+	  text-decoration: none;
+	  font-weight: bold;
+	}
+	
+	.remember-forgot a:hover {
+	  text-decoration: underline;
+	}
+    
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>User Login</h1>
+    <form action="UserLogin" method="post">
+      <div class="form-group">
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password"><b>Password</b></label>
+        <div class="password-container">
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+      </div>
+      <div class="remember-forgot">
+        
+        <a href="ForgotPassword.html">Forgot password?</a>
+        
+      </div>
+      <br>
+      <button type="submit" class="submit-btn">Login</button>
+    </form>
+    <div class="not-registered">
+      <p>Not registered yet? <a href="index.html">Register here</a></p>
+    </div>
+    
+    
+  </div>
+  
+  <script>
+    // JavaScript to toggle password visibility
+    function togglePassword() {
+      const passwordField = document.getElementById("password");
+      const toggleIcon = document.querySelector(".toggle-password");
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleIcon.textContent = "🙈"; // Change to a "hide" icon
+      } else {
+        passwordField.type = "password";
+        toggleIcon.textContent = "👁️"; // Change back to "show" icon
+      }
+    }
+  </script>
+</body>
+</html>
